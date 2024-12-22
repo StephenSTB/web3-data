@@ -1,12 +1,3 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 import ipfsConnect from './IpfsConnect.json' assert { "type": "json" };
 import { create } from 'ipfs';
 import { webSockets } from '@libp2p/websockets';
@@ -20,9 +11,9 @@ import { kadDHT } from '@libp2p/kad-dht';
 import { bootstrap } from '@libp2p/bootstrap';
 import { createHelia } from 'helia';
 import { unixfs } from '@helia/unixfs';
-export const IpfsWebRTC = (webrtc_star) => __awaiter(void 0, void 0, void 0, function* () {
+export const IpfsWebRTC = async (webrtc_star) => {
     console.time('IPFS Started');
-    let ipfs = yield create({
+    let ipfs = await create({
         repo: "ipfs-browser-" + Math.random(),
         config: {
             Addresses: {
@@ -44,7 +35,7 @@ export const IpfsWebRTC = (webrtc_star) => __awaiter(void 0, void 0, void 0, fun
     });
     console.timeEnd('IPFS Started');
     return ipfs;
-});
+};
 const blockstore = new MemoryBlockstore();
 const datastore = new MemoryDatastore();
 const config_production = {
@@ -87,10 +78,10 @@ const config_test = {
         yamux(),
     ],
 };
-export const createHeliaIPFS = (test) => __awaiter(void 0, void 0, void 0, function* () {
-    const libp2p = yield createLibp2p(test ? config_test : config_production);
-    const node = yield createHelia({ datastore, blockstore, libp2p });
+export const createHeliaIPFS = async (test) => {
+    const libp2p = await createLibp2p(test ? config_test : config_production);
+    const node = await createHelia({ datastore, blockstore, libp2p });
     const fs = unixfs(node);
     return { node, fs };
-});
+};
 export { ipfsConnect };

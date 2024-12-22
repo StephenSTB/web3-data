@@ -9,6 +9,10 @@
         "UUIDConnect": {
             "address": "0x09075Ad750992E74F11480DdbC1e1640e0AdE041",
             "block": 7255805
+        },
+        "Call": {
+            "address": "0x3f8fA84674De49854ca4c143FAb30D66b9E5724D",
+            "block": 7325550
         }
     },
     "Ganache": {
@@ -69,8 +73,8 @@
             "block": 1446154
         },
         "PublicKeys": {
-            "address": "0xfF1d5a1ADc303EF46008a89e90c07F589218d0e1",
-            "block": 2235
+            "address": "0x90272D896e2133cD44BbBeA4c95b075a20282B5c",
+            "block": 103509
         }
     },
     "Polygon": {
