@@ -13,6 +13,10 @@
         "Call": {
             "address": "0x3f8fA84674De49854ca4c143FAb30D66b9E5724D",
             "block": 7325550
+        },
+        "Name": {
+            "address": "0xED5A00840E273A30E17615c757F2ACff9e96D275",
+            "block": 7342255
         }
     },
     "Ganache": {
@@ -75,6 +79,10 @@
         "PublicKeys": {
             "address": "0x90272D896e2133cD44BbBeA4c95b075a20282B5c",
             "block": 103509
+        },
+        "Name": {
+            "address": "0x3E3D4629Dca464C2EC7f528f7594e4C0cf45ac93",
+            "block": 182037
         }
     },
     "Polygon": {

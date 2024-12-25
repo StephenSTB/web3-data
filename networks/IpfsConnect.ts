@@ -10,8 +10,6 @@ import { MemoryBlockstore} from 'blockstore-core'
 import { kadDHT } from '@libp2p/kad-dht'
 import { bootstrap } from '@libp2p/bootstrap'
 import { createHelia} from 'helia';
-import { Helia } from "@helia/interface"
-import { UnixFS, unixfs} from '@helia/unixfs'
 
 export const IpfsWebRTC = async (webrtc_star: string) =>{
     console.time('IPFS Started')
@@ -86,15 +84,15 @@ const config_test = {
 }
 
 export interface HeliaIPFS{
-	node: Helia,
-	fs: UnixFS
+	node: any,
+	fs: any
 }
 
 export const createHeliaIPFS = async (test : boolean) : Promise<HeliaIPFS> =>{
 	const libp2p = await createLibp2p(test ? config_test : config_production )
-	const node = await createHelia({ datastore, blockstore, libp2p });
-	const fs = unixfs(node);
-	return { node , fs } as HeliaIPFS
+	const node = await createHelia({});
+	//const fs = unixfs(node);
+	return { node } as HeliaIPFS
 }
 
 export { ipfsConnect}
