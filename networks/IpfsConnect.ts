@@ -2,14 +2,14 @@ import ipfsConnect from './IpfsConnect.json' assert {"type" : "json"};
 import { create } from 'ipfs';
 import { webSockets } from '@libp2p/websockets';
 import * as filters from '@libp2p/websockets/filters'
-import { createLibp2p } from 'libp2p'
-import { noise } from '@chainsafe/libp2p-noise'
-import { yamux } from '@chainsafe/libp2p-yamux'
-import { MemoryDatastore } from 'datastore-core'
-import { MemoryBlockstore} from 'blockstore-core'
-import { kadDHT } from '@libp2p/kad-dht'
-import { bootstrap } from '@libp2p/bootstrap'
-import { createHelia} from 'helia';
+//import { createLibp2p } from 'libp2p'
+//import { noise } from '@chainsafe/libp2p-noise'
+//import { yamux } from '@chainsafe/libp2p-yamux'
+//import { MemoryDatastore } from 'datastore-core'
+import { MemoryBlockstore } from 'blockstore-core'
+//import { kadDHT } from '@libp2p/kad-dht'
+//import { bootstrap } from '@libp2p/bootstrap'
+import { createHelia } from 'helia';
 
 export const IpfsWebRTC = async (webrtc_star: string) =>{
     console.time('IPFS Started')
@@ -39,8 +39,8 @@ export const IpfsWebRTC = async (webrtc_star: string) =>{
 
 const blockstore = new MemoryBlockstore();
 
-const datastore = new MemoryDatastore();
-
+//const datastore = new MemoryDatastore();
+/*
 const config_production = {
 	datastore,
 	transports:[
@@ -81,7 +81,7 @@ const config_test = {
 	streamMuxers: [
 		yamux(),
 	],
-}
+}*/
 
 export interface HeliaIPFS{
 	node: any,
@@ -89,8 +89,9 @@ export interface HeliaIPFS{
 }
 
 export const createHeliaIPFS = async (test : boolean) : Promise<HeliaIPFS> =>{
-	const libp2p = await createLibp2p(test ? config_test : config_production )
-	const node = await createHelia({});
+	console.log(test)
+	//const libp2p = await createLibp2p(test ? config_test : config_production )
+	const node = await createHelia({blockstore});
 	//const fs = unixfs(node);
 	return { node } as HeliaIPFS
 }

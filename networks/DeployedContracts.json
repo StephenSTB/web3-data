@@ -15,8 +15,8 @@
             "block": 7325550
         },
         "Name": {
-            "address": "0xED5A00840E273A30E17615c757F2ACff9e96D275",
-            "block": 7342255
+            "address": "0x16CE58d7A11D50e96fc0610FaE8c69EcB4f62BE4",
+            "block": 7370403
         }
     },
     "Ganache": {
@@ -81,8 +81,8 @@
             "block": 103509
         },
         "Name": {
-            "address": "0x3E3D4629Dca464C2EC7f528f7594e4C0cf45ac93",
-            "block": 182037
+            "address": "0x53cecD52158426B2f87F99ad34E29d28881F3200",
+            "block": 222415
         }
     },
     "Polygon": {
