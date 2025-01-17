@@ -17,6 +17,14 @@
         "Name": {
             "address": "0x16CE58d7A11D50e96fc0610FaE8c69EcB4f62BE4",
             "block": 7370403
+        },
+        "PublicKeys": {
+            "address": "0x6143D1E1b3bF7f4b311652A04e58cDb5790eA92D",
+            "block": 7451728
+        },
+        "Following": {
+            "address": "0xa7E8170bbdDEA68778A19b550ec4174113a2b96C",
+            "block": 7451751
         }
     },
     "Ganache": {
@@ -25,8 +33,8 @@
             "block": 447110
         },
         "Messages": {
-            "address": "0xF5c4d16743Bf99C96F7e7907eEC4FA6EcaDa2bc7",
-            "block": 471233
+            "address": "0x476f162D928F8a38B67eE1740F4E295087BeFaCB",
+            "block": 363080
         },
         "Feed": {
             "address": "0xE2BB6FE3CDcE8e3337ec72D35FF925aeDee50023",
@@ -77,12 +85,20 @@
             "block": 1446154
         },
         "PublicKeys": {
-            "address": "0x90272D896e2133cD44BbBeA4c95b075a20282B5c",
-            "block": 103509
+            "address": "0x723352B08D2ef0e1d8F62d9cd871Fd0CD63cDF19",
+            "block": 448443
         },
         "Name": {
-            "address": "0x53cecD52158426B2f87F99ad34E29d28881F3200",
-            "block": 222415
+            "address": "0x54EfFD18b3Ddc4Cd21cA724344d8199A99d6e956",
+            "block": 403406
+        },
+        "Following": {
+            "address": "0xf884556434fC2B1127B260f6CDDE726778add772",
+            "block": 447548
+        },
+        "Tags": {
+            "address": "0x2Bf5A9b3C905f8A80F419bB3d8Ca67fabF12AfD6",
+            "block": 640169
         }
     },
     "Polygon": {
