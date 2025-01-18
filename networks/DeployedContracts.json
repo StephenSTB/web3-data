@@ -25,6 +25,10 @@
         "Following": {
             "address": "0xa7E8170bbdDEA68778A19b550ec4174113a2b96C",
             "block": 7451751
+        },
+        "Tags": {
+            "address": "0xCbab99dB4b195F2F5bcb75D596B797936243f32D",
+            "block": 7517977
         }
     },
     "Ganache": {
